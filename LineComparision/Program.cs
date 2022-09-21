@@ -10,8 +10,8 @@ namespace LineComparision
     {
         static void Main(string[] args)
         {
-            // UC-2
-            // Comparing two lines and finding they are equal or not
+            // UC-3
+            // Comparing two lines if it is equal or not equal or greater or lesser.
 
             Console.WriteLine("Enter Line Points");
 
@@ -19,8 +19,7 @@ namespace LineComparision
             int x1, y1, x2, y2; // line 1 coordinates
             int x3, y3, x4, y4; // Line 2 coordinates
             double Length1, Length2; // float output
-
-            // difference: here taking two lines
+            
             // Line 1
             Console.WriteLine("Enter Line 1 ");
             Console.WriteLine("X1: ");
@@ -46,15 +45,24 @@ namespace LineComparision
             //Formula for finding length of a line 
             Length1 = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
             Length2 = Math.Sqrt((x4 - x3) ^ 2 + (y4 - y3) ^ 2);
-            
-            //Now comparing both Length1 & Length2
+
+            // Checking if two lines are eqaul or not 
+            // difference: comparing equal, greater, less & not equal here
             if (Length1 == Length2)
             {
-                Console.WriteLine("Two Lines are Eqaul");
+                Console.WriteLine("Two Lines are Equal");
             }
-            else
+            else if (Length1 > Length2)
             {
-                Console.WriteLine("Two Lines are not Eqaul");
+                Console.WriteLine("Line 1 is greater than Line 2");
+            }
+            else if (Length2 > Length1)
+            {
+                Console.WriteLine("Line 2 is greater than Line 1");
+            }
+            else if (Length1 != Length2)
+            {
+                Console.WriteLine("Two Lines are not Equal");
             }
 
             Console.ReadLine();
