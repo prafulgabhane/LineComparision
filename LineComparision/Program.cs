@@ -10,15 +10,19 @@ namespace LineComparision
     {
         static void Main(string[] args)
         {
-            // UC-1
-            // Calculate Length of a Line
+            // UC-2
+            // Comparing two lines and finding they are equal or not
+
             Console.WriteLine("Enter Line Points");
 
             //Decalre Variables
-             int x1, y1, x2, y2; // line coordinates
-             double Length; // float output
-            
-            //take Values from User
+            int x1, y1, x2, y2; // line 1 coordinates
+            int x3, y3, x4, y4; // Line 2 coordinates
+            double Length1, Length2; // float output
+
+            // difference: here taking two lines
+            // Line 1
+            Console.WriteLine("Enter Line 1 ");
             Console.WriteLine("X1: ");
             x1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Y1: ");
@@ -28,11 +32,30 @@ namespace LineComparision
             Console.WriteLine("Y2: ");
             y2 = Convert.ToInt32(Console.ReadLine());
 
-            //Formula for finding length of a line 
-            Length = Math.Sqrt((x2 - x1 ^ 2 + y2 - y1 ^ 2));
+            // Line 2
+            Console.WriteLine("Enter Line 2 ");
+            Console.WriteLine("X1: ");
+            x3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Y1: ");
+            y3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("X2: ");
+            x4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Y2: ");
+            y4 = Convert.ToInt32(Console.ReadLine());
 
-            //Printing Lenght of a line
-            Console.WriteLine("Length of a Line is: " + Length);
+            //Formula for finding length of a line 
+            Length1 = Math.Sqrt((x2 - x1) ^ 2 + (y2 - y1) ^ 2);
+            Length2 = Math.Sqrt((x4 - x3) ^ 2 + (y4 - y3) ^ 2);
+            
+            //Now comparing both Length1 & Length2
+            if (Length1 == Length2)
+            {
+                Console.WriteLine("Two Lines are Eqaul");
+            }
+            else
+            {
+                Console.WriteLine("Two Lines are not Eqaul");
+            }
 
             Console.ReadLine();
         }
