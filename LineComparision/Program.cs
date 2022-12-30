@@ -10,7 +10,7 @@ namespace LineComparision
     {
         static void Main(string[] args)
         {
-            // UC-3
+            // UC-3 
             // Comparing two lines if it is equal or not equal or greater or lesser.
 
             Console.WriteLine("Enter Line Points");
